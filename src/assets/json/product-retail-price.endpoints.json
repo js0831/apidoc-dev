@@ -1,0 +1,138 @@
+{
+  "data": [
+    {
+      "id": "1",
+      "name": "Fetch Retail Price",
+      "description": "",
+      "url": "/api/v1/retail-price",
+      "method": "GET",
+      "json": {
+        "request": "?limit=10&page=1&productCode={product_code}",
+        "response": {
+          "statusCode": 200,
+          "message": "success",
+          "data": {
+            "count": 100,
+            "resList": [
+              {
+                "id": "1",
+                "productCode": "abc",
+                "startDate": "2019-10-10",
+                "endDate": "2019-10-10",
+                "type": "",
+                "price": "",
+                "performancePrice": "",
+                "spec": "",
+                "refCode": "",
+                "confirmDate": "",
+                "confirmBy": "",
+                "status": "",
+                "changeBy": "",
+                "seq": ""
+              },          
+              {
+                "id": "abc",
+                "...": "..."
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "2",
+      "name": "Create Retail Price",
+      "description": "",
+      "url": "/api/v1/retail-price",
+      "method": "POST",
+      "json": {
+        "request": {
+          "retailPrice": [
+            { 
+              "productCode": "abc",
+              "startDate": "2019-10-10",
+              "endDate": "2019-10-10",
+              "type": "",
+              "price": "",
+              "performancePrice": "",
+              "spec": "",
+              "refCode": "",
+              "confirmDate": "2019-10-10",
+              "confirmBy": "user",
+              "status": "",
+              "changeBy": "user",
+              "seq": ""
+            },
+            { 
+              "productCode": "abc",
+              "startDate": "2019-10-10",
+              "endDate": "2019-10-10",
+              "type": "",
+              "price": "",
+              "performancePrice": "",
+              "spec": "",
+              "refCode": "",
+              "confirmDate": "2019-10-10",
+              "confirmBy": "user",
+              "status": "",
+              "changeBy": "user",
+              "seq": ""
+            }
+          ]
+        },
+        "response": {
+          "statusCode": 200,
+          "message": "success",
+          "data": [
+            { 
+              "id":"1",
+              "productCode": "abc",
+              "startDate": "2019-10-10",
+              "endDate": "2019-10-10",
+              "type": "",
+              "price": "",
+              "performancePrice": "",
+              "spec": "",
+              "refCode": "",
+              "confirmDate": "2019-10-10",
+              "confirmBy": "user",
+              "status": "",
+              "changeBy": "user",
+              "seq": ""
+            },
+            { 
+              "id":"2",              
+              "productCode": "abc",
+              "startDate": "2019-10-10",
+              "endDate": "2019-10-10",
+              "type": "",
+              "price": "",
+              "performancePrice": "",
+              "spec": "",
+              "refCode": "",
+              "confirmDate": "2019-10-10",
+              "confirmBy": "user",
+              "status": "",
+              "changeBy": "user",
+              "seq": ""
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "3",
+      "name": "Delete Price type",
+      "description": "",
+      "url": "/api/v1/retail-price/{id}",
+      "method": "DELETE",
+      "json": {
+        "request": "",
+        "response": {
+          "statusCode": 200,
+          "message": "success"
+        }
+      }
+    }
+  ]
+}

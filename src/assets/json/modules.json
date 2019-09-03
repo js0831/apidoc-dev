@@ -7,6 +7,10 @@
     {
       "id":"pricetype",
       "name": "Price Type"  
+    },
+    {
+      "id":"productretailprice",
+      "name": "Product Retail Price"  
     }
   ]
 }

@@ -12,6 +12,7 @@ export class ModuleComponent implements OnInit {
   @Input() module: Module;
   @Input() expand = false;
 
+  endpointJSON: string;
   endpoints: Endpoint[];
 
   constructor(
@@ -23,6 +24,8 @@ export class ModuleComponent implements OnInit {
   }
 
   private async init() {
-    this.endpoints = await this.apiService.getModuleEnpoints(this.module.id).toPromise();
+    this.endpointJSON = await this.apiService.getModuleEnpointJSON(this.module.id).toPromise();
+    this.endpoints = await this.apiService.getModuleEnpoints(this.endpointJSON).toPromise();
+    console.log(this.endpoints);
   }
 }

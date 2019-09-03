@@ -32,11 +32,20 @@ export class ApiService {
     );
   }
 
-  getModuleEnpoints(moduleId: string): Observable<Endpoint[]> {
+  getModuleEnpointJSON(moduleId: string): Observable<string> {
     const url = this.getJSONPath('endpoints');
     return this.http.get(url).pipe(
       map(result => {
         return result[moduleId];
+      })
+    );
+  }
+
+  getModuleEnpoints(json: string): Observable<Endpoint[]> {
+    const url = this.getJSONPath(json);
+    return this.http.get(url).pipe(
+      map((result: any) => {
+        return result.data;
       })
     );
   }

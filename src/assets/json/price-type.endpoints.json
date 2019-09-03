@@ -1,0 +1,189 @@
+{
+  "data": [
+    {
+      "id": "1",
+      "name": "Fetch Price Type",
+      "description": "Get all price type list",
+      "url": "/api/v1/price-type",
+      "method": "GET",
+      "json": {
+        "request": "?limit=10&page=1",
+        "response": {
+          "statusCode": 200,
+          "message": "success",
+          "data": {
+            "count": 100,
+            "resList": [
+              {
+                "code": "abc",
+                "...": "..."
+              },
+              {
+                "code": "abc",
+                "...": "..."
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "2",
+      "name": "Fetch Price Type with search keyword",
+      "description": "Get all price type list filtered by keyword",
+      "url": "/api/v1/price-type",
+      "method": "GET",
+      "json": {
+        "request": "?limit=10&page=1&search=keyword",
+        "response": {
+          "statusCode": 200,
+          "message": "success",
+          "data": {
+            "count": 100,
+            "resList": [
+              {
+                "code": "abc",
+                "...": "..."
+              },
+              {
+                "code": "abc",
+                "...": "..."
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "3",
+      "name": "Create Price type",
+      "description": "",
+      "url": "/api/v1/price-type",
+      "method": "POST",
+      "json": {
+        "request": {
+          "user": "user1",
+          "code": "",
+          "name": "",
+          "localName": "",
+          "stockType": "",
+          "serialNumberNeeded": false,
+          "discountPriceType": false,
+          "passwordNeeded": false,
+          "memberPriceType": false,
+          "ranOnly": false,
+          "damOnly": false
+        },
+        "response": {
+          "statusCode": 200,
+          "message": "success",
+          "data": {
+            "code": "",
+            "name": "",
+            "localName": "",
+            "stockType": "",
+            "serialNumberNeeded": false,
+            "discountPriceType": false,
+            "passwordNeeded": false,
+            "memberPriceType": false,
+            "ranOnly": false,
+            "damOnly": false,
+            "createBy": "user",
+            "modifyBy": "user",
+            "createDate": "2019-10-10",
+            "modifyDate": "2019-10-10"
+          }
+        }
+      }
+    },
+    {
+      "id": "4",
+      "name": "Update Price type",
+      "description": "",
+      "url": "/api/v1/price-type/{price_type_code}",
+      "method": "PUT",
+      "json": {
+        "request": {
+          "user": "user1",
+          "code": "abc",
+          "name": "",
+          "localName": "",
+          "stockType": "",
+          "serialNumberNeeded": false,
+          "discountPriceType": false,
+          "passwordNeeded": false,
+          "memberPriceType": false,
+          "ranOnly": false,
+          "damOnly": false
+        },
+        "response": {
+          "statusCode": 200,
+          "message": "success",
+          "data": {
+            "code": "abc",
+            "name": "",
+            "localName": "",
+            "stockType": "",
+            "serialNumberNeeded": false,
+            "discountPriceType": false,
+            "passwordNeeded": false,
+            "memberPriceType": false,
+            "ranOnly": false,
+            "damOnly": false,
+            "createBy": "user",
+            "modifyBy": "user",
+            "createDate": "2019-10-10",
+            "modifyDate": "2019-10-10"
+          }
+        }
+      }
+    },
+    {
+      "id": "5",
+      "name": "Delete Price type",
+      "description": "",
+      "url": "/api/v1/price-type/{price_type_code}",
+      "method": "DELETE",
+      "json": {
+        "request": "",
+        "response": {
+          "statusCode": 200,
+          "message": "success",
+          "data": {
+            "code": "abc"
+          }
+        }
+      }
+    },
+    {
+      "id": "6",
+      "name": "View Price type",
+      "description": "",
+      "url": "/api/v1/price-type/{price_type_code}",
+      "method": "GET",
+      "json": {
+        "request": "",
+        "response": {
+          "statusCode": 200,
+          "message": "success",
+          "data": {
+            "code": "abc",
+            "name": "",
+            "localName": "",
+            "stockType": "",
+            "serialNumberNeeded": false,
+            "discountPriceType": false,
+            "passwordNeeded": false,
+            "memberPriceType": false,
+            "ranOnly": false,
+            "damOnly": false,
+            "createBy": "user",
+            "modifyBy": "user",
+            "createDate": "2019-10-10",
+            "modifyDate": "2019-10-10"
+          }
+        }
+      }
+    }
+  ]
+}
