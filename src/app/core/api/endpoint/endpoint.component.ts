@@ -10,13 +10,17 @@ export class EndpointComponent implements OnInit {
 
   @Input() endpoint: Endpoint;
   @Input() expand = false;
+  isRequestBody = true;
 
   data = {
     name: 'Jener'
   };
-  constructor() { }
+
+  constructor() {
+  }
 
   ngOnInit() {
+    this.isRequestBody = (typeof this.endpoint.json.request) === 'object';
   }
 
 }

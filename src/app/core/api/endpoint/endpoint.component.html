@@ -14,7 +14,7 @@
         class="endpoint__info">
         <div>
             <label>URL</label> 
-            <span>: {{endpoint.url}}</span>
+            <span class="url">: {{endpoint.url}}</span>
         </div>
         <div>
             <label>Method</label> 
@@ -23,10 +23,15 @@
     </div>
     <div  
         class="endpoint__json">
-        <div class="endpoint__request">
-            <label>Request</label>
+        <div 
+            *ngIf="endpoint.json.request"
+            class="endpoint__request">
+            <label>{{isRequestBody ? 'Request Body' : 'URL Parameters'}}</label>
             <div class="endpoint__json-view">
-                <pre>{{endpoint.json.request | json}}</pre>
+                <pre *ngIf="isRequestBody; else urlparams">{{endpoint.json.request | json}}</pre>
+                <ng-template #urlparams>
+                    <pre>{{endpoint.json.request}}</pre>
+                </ng-template> 
             </div>
         </div>
         <div class="endpoint__response">
