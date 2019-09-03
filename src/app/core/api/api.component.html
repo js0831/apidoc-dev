@@ -1,0 +1,15 @@
+<div 
+    *ngIf="project"
+    class="api">
+    <div class="api__project">
+        <h1>{{project.name}} API</h1>
+    </div>
+    <div class="api__doc">
+        <app-module
+            *ngFor="let m of projectModules"
+            [module]="m"
+            [expand]="selectedProjectModule && selectedProjectModule.id === m.id"
+            (click)="selectModule(m)"
+        ></app-module>
+    </div>
+</div>

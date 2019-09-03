@@ -1,0 +1,13 @@
+<div class="module">
+    <div class="module__name">
+        {{module.name}}
+    </div>
+    <div 
+        *ngIf="expand"
+        class="module__doc">
+        <app-endpoint
+            *ngFor="let endpoint of endpoints"
+            [endpoint]="endpoint"
+        ></app-endpoint>
+    </div>
+</div>

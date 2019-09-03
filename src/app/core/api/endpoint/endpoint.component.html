@@ -1,0 +1,44 @@
+<div class="endpoint {{ expand ? 'endpoint--expanded' : 'endpoint--collapsed'}}">
+    <div 
+        class="endpoint__info">
+        <div>
+            <label>Name</label> 
+            <span>: {{endpoint.name}}</span>
+        </div>
+        <div>
+            <label>Description</label>
+            <span>: {{endpoint.description}}</span> 
+        </div>
+    </div>
+    <div  
+        class="endpoint__info">
+        <div>
+            <label>URL</label> 
+            <span>: {{endpoint.url}}</span>
+        </div>
+        <div>
+            <label>Method</label> 
+            <span>: {{endpoint.method}}</span>
+        </div>
+    </div>
+    <div  
+        class="endpoint__json">
+        <div class="endpoint__request">
+            <label>Request</label>
+            <div class="endpoint__json-view">
+                <pre>{{endpoint.json.request | json}}</pre>
+            </div>
+        </div>
+        <div class="endpoint__response">
+                <label>Response</label>
+                <div class="endpoint__json-view">
+                    <pre>{{endpoint.json.response | json}}</pre>
+                </div>    
+        </div>
+    </div>
+    <span 
+        (click)="expand = !expand"
+        class="endpoint__toggle">
+        {{ !expand ? 'expand' : 'collapse'}}
+    </span>
+</div>

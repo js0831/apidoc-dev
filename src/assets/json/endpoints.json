@@ -1,0 +1,66 @@
+{
+  "product": [
+    {
+      "id":"1",
+      "name": "test a",
+      "description" : "test",
+      "url": "url",
+      "method": "POST",
+      "json":{
+        "request": {
+          "name":"a"
+        },
+        "response": {
+          "name":"a"
+        }
+      }
+    },
+    {
+      "id":"2",
+      "name": "test b",
+      "description" : "test",
+      "url": "url",
+      "method": "POST",
+      "json":{
+        "request": {
+          "name":"a"
+        },
+        "response": {
+          "name":"a"
+        }
+      }
+    }
+  ],
+  "pricetype": [
+    {
+      "id":"3",
+      "name": "test ca",
+      "description" : "test",
+      "url": "url",
+      "method": "POST",
+      "json":{
+        "request": {
+          "name":"a"
+        },
+        "response": {
+          "name":"a"
+        }
+      }
+    },
+    {
+      "id":"4",
+      "name": "test db",
+      "description" : "test",
+      "url": "url",
+      "method": "POST",
+      "json":{
+        "request": {
+          "name":"a"
+        },
+        "response": {
+          "name":"a"
+        }
+      }
+    }
+  ]
+}

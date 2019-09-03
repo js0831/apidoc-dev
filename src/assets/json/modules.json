@@ -1,0 +1,12 @@
+{
+  "ppos":[
+    {
+      "id":"product",
+      "name": "Product Catalog"
+    },
+    {
+      "id":"pricetype",
+      "name": "Price Type"  
+    }
+  ]
+}
